@@ -11,8 +11,23 @@
     var varaivel_var = "texto"; // variavel de escopo global
     const variavel_const = true; // variavel do tipo constante -> valor inalteravel
   
-    console.log(varaivel_var, variavel_const, variavel_let);
-  
+   variavel_let = 10;
+   variavel_var = 70;
+ // isso vai dar erro de tipo -> nao pode alterar constante
+
+if(variavel_let == 5){
+    console.log("é igual")
+}
+  else{
+    console.log("é diferente")
+  }
+
+  function somar(x, y){
+    return x + y;
+  }
+console.log(10,20)
+
+
 </script>    
 </body>
 </html>
