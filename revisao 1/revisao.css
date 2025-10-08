@@ -1,0 +1,44 @@
+/*  */
+
+h1{
+    color: brown;
+}
+ 
+
+.cor-vermelho {
+    color: brown; 
+    background-color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cor-azul {
+    color: blue; /* cor do texto */     
+    background-color: rgb(255, 0, 0); /* cor do fundo */   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* fonte do texto */
+}
+
+.quadrado-amarelo{
+    color: rgb(0, 0, 0);  /* cor do texto */ 
+    background-color:yellow; /* cor do fundo */ 
+    height: 200px; /* altura do quadrado */
+    width: 700px;  /* tamanho do quadrado */
+   
+}
+
+
+.quadrado-roxo{
+    color: aliceblue;  /* cor do texto */ 
+    background-color: blueviolet; /* cor do fundo */ 
+    height: 200px; /* altura do quadrado */
+    width: 600px;  /* tamanho do quadrado */
+    
+}
+
+
+
+.alinhamento{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    height: 100vh;
+}
