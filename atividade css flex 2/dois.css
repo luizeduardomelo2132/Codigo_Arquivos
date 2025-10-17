@@ -1,0 +1,60 @@
+
+.container{
+display: flex ;
+flex-direction: column ;
+width: 10px;
+height:10px;
+}
+
+.metade{
+    width: 50%;
+}
+
+
+
+.linha1{
+    background: linear-gradient(to right,yellow 50% blue 50%);
+    height: 33.3333%;
+    width: 100%;
+}
+
+
+.linha2{
+    background-color: aliceblue;
+    height: 33.3333%;
+    width: 100%;
+}
+
+.linha3 {
+    background-color: blue;
+    height: 33.3333%;
+    width: 100%;
+}
+
+.retangulo-azul{
+    background-color: blue;
+    width: 5zzzz00px;
+    height: 300px;
+}
+
+.retangulo-amarelo{
+
+    background-color: yellow;
+    width: 600px;
+    height: 300px;
+}
+
+.retangulo-azul-maior{
+    background-color: blue;
+    width: 2450px;
+    height: 300px;
+}
+
+
+
+.quadrado-ama-pequeno{
+    background-color: yellow;  
+    height: 70px;
+    width: 70px;
+} 
+
