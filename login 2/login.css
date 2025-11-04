@@ -1,0 +1,176 @@
+.container{
+    height: 100vh; /* altura do container*/
+ }
+ 
+ 
+ .quadrado-menor{
+    background-color:rgb(116, 44, 44); /*cor de fundo do quadrado menor*/
+     height: 920px; /* altura do quadrado menor*/
+     width: 350px; /* comprimento do quadrado maior*/
+     border-radius: 15px 0px 0px 15px ; /*borda do quadrado maior*/
+ }
+ 
+ 
+ .quadrado-maior{
+     background-color: rgb(59, 46, 46); /*cor do quadrado maior*/
+     height: 920px; /*altura do quadrado maior*/
+     width: 850px; /*comprimento do quadrado maior*/
+     border-radius:0px 15px 15px 0px ; /*borda do quadrado maior*/
+ }
+ 
+ 
+ .final{
+     justify-content: end; /*ajuste de direcao na horizontal no final*/
+ }
+ 
+ 
+ .flex{
+     display: flex; /*flexibilizacao da div*/
+ }
+ 
+ 
+ .centro{
+     align-items: center; /*ajuste da direcao na vertical no centro*/
+ }
+ 
+ 
+ .centro-linha{
+     justify-content: center; /*ajuste da direcao na horizontal no centro*/
+ }
+ 
+ 
+ .comeco-1{
+     align-items: start;
+     justify-content: center;
+ 
+ 
+ }
+ 
+ 
+ .comeco-2{
+     align-items: start;
+     justify-content: center;
+ }
+ 
+ 
+ .vindo{
+     background-color: rgb(105, 29, 29); /*cor do quadrado que esta a escrita seja bem vindo*/
+     height: 70px; /*altura do quadrado*/
+     width: 150px; /*comprimento do quadrado*/  
+ }
+ 
+ 
+ .centro-alinha{
+     justify-content: center; /*ajuste de direcao na horizontal no centro*/
+     align-items: center; /*ajuste de direcao na vertical*/
+     margin: 100px; /*margem do quadrado*/
+ }
+ /*primeira divisao do quadrado menor*/
+ .div-1{
+     width: 350px; /*comprimento da primeira divisao*/
+     height: 33.3333%; /*altura da primeira divisao*/
+     display: flex; /*flexibilizacao */
+     justify-content: center; /* ajuste da direcao na horizontal no comeco*/
+     align-items: end; /* ajuste da direcao na vertical no final*/
+ }
+ /*segunda divisao do quadrado menor*/
+ .div-2{
+     width: 350px; /*comprimento da segunda divisao do quadrado*/
+     height: 33.3333%; /*altura da segunda divisao do quadrado*/
+     justify-content: center; /*ajuste da direcao na horizontal no centro do quadrado*/
+     display: flex; /*flexibilizacao da segunda divisao do quadrado*/
+ }
+ /*terceira divisao do quadrado menor*/
+ .div-3{
+     width: 350px; /*altura da segunda divisao do quadrado*/
+     height: 33.3333%; /*comprimento da segunda divisao do quadrado*/
+     justify-content: end; /*ajuste da direcao na vertical no final do quadrado*/
+ }
+ /*configuracao da escrita*/
+ .fon{
+     font-size: 40px; /*tamanho da fonte*/
+     color: #dbdbdb; /*cor da fonte*/
+ }
+ 
+ 
+ .fon-2{
+     font-size: 30px; /*tamanho da fonte*/
+     color: #dbdbdb; /*cor da fonte*/
+ }
+ 
+ 
+ 
+ 
+ /*configuracao do botao*/
+ .botao{
+     margin-top: 30px; /*margem do topo*/
+     margin-left: 100px; /*margem a esquerda*/
+     width: 160px; /*comprimento do botao*/
+     height: 70px; /*altura do botao*/
+     border-radius: 10px; /*tamanho do raio da borda do boto*/
+ }
+ 
+ 
+ .botao-2 {
+     height: 80px;
+     width: 380px;
+ 
+ 
+ }
+ 
+ 
+ .email {
+     height: 80px;
+     width: 480px;
+     border-radius: 10px;
+ }
+ 
+ 
+ .div-4{
+     width: 850px;
+     height: 25%;
+     display: flex;
+     justify-content: center;
+     align-items: end;
+     display: flex;
+ }
+ 
+ 
+ .div-5{    
+     width: 850px;
+     height: 25%;
+     justify-content: center;
+     align-items: center;
+     display: flex;
+ }
+ 
+ 
+ .teste{
+     border-radius: 10px;
+ }
+ 
+ 
+ .div-6{  
+     width: 850px;
+     height: 25%;
+     justify-content:center;
+     display: flex;
+     align-items: start;
+ }
+ 
+ 
+ .div-7{
+     width: 850px;
+     height: 25%;
+     justify-content: center;
+     align-items: start;
+     display: flex;
+ }
+ 
+ 
+ .fundo{
+     background-color: rgb(37, 10, 10);
+     width: 100%;
+     height: 100%;
+ }
+ 
