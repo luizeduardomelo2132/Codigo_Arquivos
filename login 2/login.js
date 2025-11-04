@@ -6,7 +6,7 @@ function cadastrar() {
    
     if(Usuario && Senha === ConfirmarSenha){
     localStorage.setItem(Usuario,Senha)
-        return alert ('usuario ${Usuario} cadastrado com sucesso!')
+        return alert (`usuario ${Usuario} cadastrado com sucesso!`)
 
 
     }
