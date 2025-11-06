@@ -1,0 +1,8 @@
+body {
+    height: 100vh;
+    background: url('./planta3.jpg') 
+    no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
