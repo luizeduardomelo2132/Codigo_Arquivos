@@ -1,7 +1,8 @@
 function cadastrar(){
-    const usuario = document.getElementById('usuario').value
-    const senha = document.getElementById('senha').value
-    const confirmarSenha = document.getElementById('confirmarSenha').value
+    const Email = document.getElementById('Email').value
+    const Senha = document.getElementById('Senha').value
+    const ConfirmarSenha = document.getElementById('ConfirmarSenha').value
+    const telefone = document.getElementById('Telefone').value
 
     if(usuario && senha === confirmarSenha){
         localStorage.setItem(usuario,senha)

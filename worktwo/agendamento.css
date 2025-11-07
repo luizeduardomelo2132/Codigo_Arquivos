@@ -1,0 +1,32 @@
+body {
+  height: 100vh;
+  background: url('./planta4.jpg') 
+  no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  width: 800px;
+  height: 700px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.preenchimento {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+  }
+  
+  .select-botao{
+    background-color: black;
+  }
