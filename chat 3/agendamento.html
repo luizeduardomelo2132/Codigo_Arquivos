@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Consultas - Hospital Saude</title>
+    <link rel="stylesheet" href="agendacss.css">
+</head>
+<body>
+
+<header>
+    <h1>Hospital Saude</h1>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Serviços</a>
+        <a href="#">Profissionais</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <section class="calendar">
+        <h2>Escolha a Data</h2>
+        
+        <iframe src="https://calendar.google.com/calendar/embed?src=pt_br.brazilian%23holiday%40group.v.calendar.google.com"></iframe>
+    </section>
+
+    <section class="card">
+        <h2>Agende sua Consulta</h2>
+        <form>
+            <label for="Observacao">Observação</label>
+            <input class="preto text-branco" type="text" id="observacao" placeholder="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" required>
+        
+            <label for="altura">Altura</label>
+            <input class="preto text-branco" type="text" id="altura" placeholder="x.xx" required>
+        
+            <label for="peso">Peso</label>
+            <input class="preto text-branco" type="text" id="peso" placeholder="xxx" required>
+        
+            <label for="medico">Selecione o Médico</label>
+            <select class="preto text-branco" id="medico" required>
+                <option value="">-- Escolha --</option>
+                <option value="dr-pedro">Dr. Pedro Almeida - Cardiologia</option>
+                <option value="dra-marina">Dra. Marina Santos - Endocrinologia</option>
+                <option value="dr-rafael">Dr. Rafael Costa - Ortopedia</option>
+                <option value="dra-beatriz">Dra. Beatriz Nogueira - Ginecologia</option>
+                <option value="dr-joao">Dr. João Pires - Clínico Geral</option>
+                <option value="dra-ana">Dra. Ana Monteiro - Dermatologia</option>
+                <option value="dr-lucas">Dr. Lucas Ferreira - Neurologia</option>
+                <option value="dra-camila">Dra. Camila Rocha - Pediatria</option>
+                <option value="dr-gustavo">Dr. Gustavo Lima - Psiquiatria</option>
+                <option value="dra-patricia">Dra. Patrícia Carvalho - Oftalmologia</option>
+                <option value="dr-eduardo">Dr. Eduardo Martins - Urologia</option>
+                <option value="dra-fernanda">Dra. Fernanda Ribeiro - Reumatologia</option>
+                <option value="dr-ricardo">Dr. Ricardo Silva - Pneumologia</option>
+                <option value="dra-juliana">Dra. Juliana Barros - Nutrologia</option>
+                <option value="dr-felipe">Dr. Felipe Teixeira - Gastroenterologia</option>
+            </select>
+        
+            <label for="data">Data da Consulta</label>
+            <input class="preto text-branco" type="date" id="data" required>
+        
+            <label for="hora">Horário</label>
+            <input class="preto text-branco" type="time" id="hora" required>
+        
+            <button type="submit">Confirmar Agendamento</button>
+        </form>
+        
+    </section>
+</main>
+    <script src="chat-widget.js"></script>
+</body>
+</html>
