@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <link rel="stylesheet" href="chat.css">
+ <div class="page">
+    <header>
+       <img class="icon" src="./location.png" alt="">
+      <div>
+        <h1>Assistente de Agendamento — Chatbot</h1>
+        
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Perguntas rápidas</h2>
+        <div class="q-list" id="qList"></div>
+
+        <hr style="margin:12px 0;border:none;border-top:1px solid #eef2ff">
+        <div style="font-size:13px;color:var(--muted)">Ações rápidas</div>
+        <div class="quick-row" style="margin-top:8px">
+          <button class="chip" id="startScheduling">Agendar consulta</button>
+          <button class="chip" id="listAppointments">Minhas consultas</button>
+          <button class="chip" id="clearChat">Limpar chat</button>
+        </div>
+      </aside>
+
+      <main class="chat-card">
+        <div class="messages" id="messages" aria-live="polite"></div>
+
+        <div class="input-area">
+          <input type="text" id="userInput" placeholder="Digite uma pergunta ou escolha uma sugestão...">
+          <button class="btn" id="sendBtn">Enviar</button>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;color:var(--muted)">Dica: clique em uma pergunta à esquerda para inserir automaticamente.</div>
+      </main>
+    </div>
+  </div>
+
+<script src="chat.js"></script>
+</body>
+</html>
