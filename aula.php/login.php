@@ -36,8 +36,8 @@ if ($_POST) {
         <h1 id="titulo-login">Acesso ao Sistema</h1>
         <p>Faça login para continuar</p>
         <?php if(isset($erro)) echo "<p style='color:red; text-align:center;'>$erro</p>"; ?>
-        <form method="POST">
-             <form id="login-form" aria-describedby="descricao-form">
+
+             <form id="login-form" aria-describedby="descricao-form" method="POST">
                 <p id="descricao-form" class="sr-only">
                     Todos os campos são obrigatórios. Use a tecla Tab para navegar entre os campos.
                 </p>
@@ -51,7 +51,6 @@ if ($_POST) {
                 <button type="submit" id="btn-entrar">Entrar</button>
 
                 <p id="login-msg" role="alert" aria-live="assertive"></p>
-            </form>
         
             <div class="footer-link">
                 Não tem conta? <a href="index.php">Cadastrar</a>

@@ -2,13 +2,17 @@
 
 include('connection.php');
 
-$email = $_POST['email'];
+$titulo = $_POST['titulo'];
 
-$password = $_POST['password'];
+$autor = $_POST['autor'];
 
-$confirm_password = $_POST['confirm_password'];
+$ano = $_POST['ano'];
 
-$sql = "INSERT INTO usuario (email, password) values ('$email', '$password')";
+$categoria = $_POST['categoria'];
+
+$quantidade = $_POST['quantidade'];
+
+$sql = "INSERT INTO livros (titulo, autor, ano, categoria, quantidade) values ('$titulo', '$autor', '$ano', '$categoria', '$quantidade')";
 
 if ($conn->query($sql) ===  TRUE){ 
     echo "usuario cadastrado com sucesso";

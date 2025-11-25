@@ -118,3 +118,25 @@ button:focus {
 #logout-btn:hover {
     background-color: #d63939;
 }
+
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+table, th, td {
+    border: 1px solid #444;
+}
+th {
+    background: #eee;
+    padding: 10px;
+    font-weight: bold;
+}
+td {
+    padding: 8px;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}

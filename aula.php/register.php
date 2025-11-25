@@ -2,12 +2,12 @@
 require "connection.php";
 
 if ($_POST) {
-    $nome  = $_POST['nome'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $titulo  = $_POST['titulo'];
+    $autor = $_POST['autor'];
+    $ano = $_POST['ano'];
 
-    $sql = "INSERT INTO usuario (nome, email, senha)
-            VALUES ('$nome', '$email', '$password')";
+    $sql = "INSERT INTO livros (titulo, autor, ano)
+            VALUES ('$titulo', '$autor', '$ano')";
 
     if (mysqli_query($conn, $sql)) {
         header("Location: login.php");
