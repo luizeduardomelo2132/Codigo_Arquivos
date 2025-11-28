@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro de Livros</title>
+<link rel="stylesheet" href="lica.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Cadastro de Livros</h1>
+    <form id="bookForm">
+      <label>Título
+        <input id="titulo" name="titulo" type="text" required />
+      </label>
+
+      <label>Autor
+        <input id="autor" name="autor" type="text"required />
+      </label>
+
+      <label>Ano
+        <input id="ano" name="ano" type="number"    required />
+      </label>
+
+      <label>Quantidade
+        <input id="quantidade" name="quantidade" type="number"   required />
+      </label>
+
+      <label class="full">Categoria
+        <select id="categoria" name="categoria" required>
+          <option value=""> escolha </option>           
+                <option value="ficçao cientifica">ficçao cientifica</option>
+                <option value="misterio">misterio</option>
+                <option value="romance">romance</option>
+                <option value="fantasia">fantasia</option>
+                <option value="aventura">aventura</option>
+                <option value="terror">terror</option>
+        </select>
+      </label>
+
+      <div class="full actions">
+        <button type="button" class="ghost" id="limpar">Limpar</button>
+        <button type="submit" class="primary">Adicionar Livro</button>
+      </div>
+    </form>
+
+    
+
+  <script>
+    // Utilitários
+    const qs = (s) => document.querySelector(s);
+
+    const form = qs('#bookForm');
+    const tbody = qs('#tbody');
+    const limparBtn = qs('#limpar');
+
+    // Carrega lista do localStorage
+    let livros = JSON.parse(localStorage.getItem('livros')) || [];
+
+    function salvarLocal(){ localStorage.setItem('livros', JSON.stringify(livros)); }
+
+    function render(){
+      tbody.innerHTML = '';
+      if(!livros.length){
+        tbody.innerHTML = '<tr class="empty-row"><td class="empty" colspan="6">Nenhum livro cadastrado.</td></tr>';
+        return;
+      }
+
+      livros.forEach((l, idx) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${escapeHtml(l.titulo)}</td>
+          <td>${escapeHtml(l.autor)}</td>
+          <td class="small">${l.ano}</td>
+          <td>${escapeHtml(l.categoria)}</td>
+          <td class="small">${l.quantidade}</td>
+          <td class="small">
+            <button data-idx="${idx}" class="edit">Editar</button>
+            <button data-idx="${idx}" class="del">Excluir</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Proteção básica contra XSS em inserções simples
+    function escapeHtml(str){
+      return String(str)
+        .replaceAll('&','&amp;')
+        .replaceAll('<','&lt;')
+        .replaceAll('>','&gt;')
+        .replaceAll('"','&quot;')
+        .replaceAll("'",'&#39;');
+    }
+
+    // Validação simples
+    function validar(d){
+      if(!d.titulo.trim()) return 'Título obrigatório.';
+      if(!d.autor.trim()) return 'Autor obrigatório.';
+      if(!d.ano || isNaN(d.ano) || d.ano < 0) return 'Ano inválido.';
+      if(!d.categoria) return 'Selecione uma categoria.';
+      if(d.quantidade == null || isNaN(d.quantidade) || d.quantidade < 0) return 'Quantidade inválida.';
+      return '';
+    }
+
+    // Submit
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = {
+        titulo: qs('#titulo').value,
+        autor: qs('#autor').value,
+        ano: Number(qs('#ano').value),
+        categoria: qs('#categoria').value,
+        quantidade: Number(qs('#quantidade').value)
+      };
+
+      const err = validar(data);
+      if(err){ alert(err); return; }
+
+      livros.push(data);
+      salvarLocal();
+      render();
+      form.reset();
+    });
+
+    // Limpar form
+    limparBtn.addEventListener('click', () => form.reset());
+
+    // Delegação para editar/excluir
+    tbody.addEventListener('click', (e) => {
+      const btn = e.target;
+      const idx = btn.dataset.idx;
+      if(!idx && idx !== '0') return;
+
+      if(btn.classList.contains('del')){
+        if(!confirm('Excluir este livro?')) return;
+        livros.splice(Number(idx),1);
+        salvarLocal();
+        render();
+      }
+
+      if(btn.classList.contains('edit')){
+        const item = livros[idx];
+        qs('#titulo').value = item.titulo;
+        qs('#autor').value = item.autor;
+        qs('#ano').value = item.ano;
+        qs('#categoria').value = item.categoria;
+        qs('#quantidade').value = item.quantidade;
+        // ao editar: removemos o item antigo para que o submit adicione a versão atualizada
+        livros.splice(Number(idx),1);
+        salvarLocal();
+        render();
+        qs('#titulo').focus();
+      }
+    });
+
+    // Inicializa
+    render();
+  </script>
+</body>
+</html>
