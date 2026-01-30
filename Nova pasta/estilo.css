@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.um{
+    justify-content: flex-start;
+    height: 33.33vh;
+    display: flex;
+}
+
+.dois{
+    justify-content: center;
+    height: 33.33vh;
+    display: flex;
+}
+
+.tres{
+    justify-content: flex-end;
+    height: 33.33vh;
+    display: flex;
+}
+
+
+.quadrado_comeco{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.quadrado_meio{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.quadrado_final{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+.quadrado_comeco{
+    background-image: linear-gradient(to right, aqua 50%, yellow 50%);
+}
+
+.quadrado_meio{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+}
+
+.quadrado_final{
+    background-color: aqua;
+}
+
+
+.quadradinho_azul{
+    width: 110px;
+    height: 110px;
+    background-color: aqua;
+}
+
+.quadradinho_amarelo{
+    width: 110px;
+    height: 110px;
+    background-color: yellow;
+}
+
+
+.espaco{
+    justify-content: space-between;
+}
+
+.metade{
+    height: 50;
+}
+
+.meio{
+    justify-content: center;
+}
