@@ -4,12 +4,13 @@ include("connection.php");
 
 
 $nome = $_POST['nome'];
+$email = $_POST['email'];
 $CPF = $_POST['CPF'];
 $data_nascimento = $_POST['data_nascimento'];
 $senha = $_POST['senha'];
 
 
-$sql = "INSERT INTO usuarios (nome, CPF, data_nascimento, senha) VALUES ('$nome', '$CPF', '$data_nascimento', '$senha')";
+$sql = "INSERT INTO usuarios (nome, email, CPF, data_nascimento, senha) VALUES ('$nome', '$email', '$CPF', '$data_nascimento', '$senha')";
 
 
 
