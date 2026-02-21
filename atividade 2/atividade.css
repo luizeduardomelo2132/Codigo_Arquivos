@@ -1,0 +1,75 @@
+*{
+margin: 0px;
+padding: 0px;
+}
+
+.container{
+    height: 100vh;
+}
+.quadrado-azul{
+background-color: #c50606; /*cor do qaudrado*/
+height: 250px; /*altura do quadrado*/
+width: 250px; /*largura do quadrado*/
+}
+
+.linha-1{
+    display: flex;
+    justify-content: space-between;
+}
+.linha-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linha-3{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.linha{
+    height: 33.3333%;
+}
+.quadrado-laranja{
+    background-color: orange;
+    height: 70px;
+    width: 70px;
+}
+
+.metade{
+    height: 50%;
+   
+}
+
+.flex{
+    display: flex;
+}
+
+.alinha-meio{
+    justify-content: center;
+}
+
+.alinha-coluna-final{
+    align-items: end;
+}
+
+.terco{
+    height: 33.33333%;
+}
+
+.alinha-separado{
+    justify-content: space-between;
+}
+
+.alinha-final{
+    justify-content: end;
+}
+
+.alinha-comeco {
+    justify-content: start;
+}
+
+.alinha-flex{
+    justify-content:flex-end
+}
